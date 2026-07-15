@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
- */
+
 package Modelo;
 
-/**
- *
- * @author Usuario iTC
- */
 public enum Calidad {
+    SD("SD"),
+    HD("HD"),
+    CUATRO_K("4K");
+    
+    private final String nombre;
+    
+    Calidad(String nombre){
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+    
     
 }
