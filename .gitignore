@@ -1,0 +1,21 @@
+# Archivos privados de NetBeans
+nbproject/private/
+
+# Proyecto de DB Browser
+*.sqbpro
+
+# Archivos de log
+*.log
+
+# Archivos compilados
+build/
+dist/
+
+# Base de datos local
+*.db
+
+# Archivos NetBeans
+nbproject/private/
+
+# Archivos temporales
+*.class
