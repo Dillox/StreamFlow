@@ -1,13 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
-/**
- *
- * @author Usuario iTC
- */
 public class Usuario {
-    
+
+    private int id;
+    private String nombre;
+    private String plan;
+
+    public Usuario(int id, String nombre, String plan) {
+        this.id = id;
+        this.nombre = nombre;
+        this.plan = plan;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getPlan() {
+        return plan;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPlan(String plan) {
+        this.plan = plan;
+    }
 }
