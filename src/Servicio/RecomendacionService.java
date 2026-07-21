@@ -1,13 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Servicio;
 
-/**
- *
- * @author Usuario iTC
- */
+import Modelo.Contenido;
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class RecomendacionService {
-    
+
+
+    public List<Contenido> recomendarPorGenero(
+            List<Contenido> contenidos,
+            String genero){
+
+
+        List<Contenido> recomendaciones = new ArrayList<>();
+
+
+        for(Contenido contenido : contenidos){
+
+
+            if(contenido.getGenero()
+                    .equalsIgnoreCase(genero)){
+
+
+                recomendaciones.add(contenido);
+
+            }
+
+        }
+
+
+        return recomendaciones;
+
+    }
+
+
 }

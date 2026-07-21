@@ -1,13 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Servicio;
 
-/**
- *
- * @author Usuario iTC
- */
+import Modelo.Calidad;
+
 public class SuscripcionService {
-    
+
+
+    public double calcularCosto(Calidad calidad){
+
+        return calidad.getPrecio();
+
+    }
+
+
+    public String obtenerPlan(Calidad calidad){
+
+        switch(calidad){
+
+            case SD:
+                return "Plan Básico";
+
+            case HD:
+                return "Plan Estándar";
+
+            case CUATRO_K:
+                return "Plan Premium";
+
+            default:
+                return "Sin plan";
+        }
+
+    }
+
 }
