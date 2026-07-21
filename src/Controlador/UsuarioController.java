@@ -1,20 +1,18 @@
 package Controlador;
 
-import DAO.IUsuarioDAO;          // DIP: dependemos de la interfaz
+import DAO.IUsuarioDAO;          
 import DAO.UsuarioDAO;
 import Modelo.Usuario;
 import java.util.List;
 
 public class UsuarioController {
 
-    // DIP: la variable es del tipo interfaz, no de la implementación concreta
     private final IUsuarioDAO usuarioDAO;
 
     public UsuarioController() {
         this.usuarioDAO = new UsuarioDAO();
     }
 
-    /** Constructor para inyección de dependencias (testing, DIP). */
     public UsuarioController(IUsuarioDAO dao) {
         this.usuarioDAO = dao;
     }

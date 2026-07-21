@@ -203,7 +203,7 @@ public class MenuPrincipal {
         Calidad calidad = pedirCalidad();
         double costo = suscripcion.calcularCosto(calidad);
         String plan  = suscripcion.obtenerPlan(calidad);
-        System.out.printf("% %s (%s) → $%.2f / mes%n", plan, calidad, costo);
+        System.out.printf("%nPlan: %s (%s) - $%.2f / mes%n", plan, calidad, costo);
     }
 
    

@@ -14,17 +14,11 @@ public abstract class Contenido {
         this.calidad = calidad;
     }
 
-    // Métodos polimórficos obligatorios en cada subclase
     public abstract String reproducir();
     public abstract String obtenerDetalles();
 
-    /**
-     * OCP: Cada subclase declara su propio tipo.
-     * Así el DAO nunca necesita usar instanceof.
-     */
     public abstract String getTipo();
 
-    // ── Getters y Setters ──────────────────────────────────────────────────────
 
     public int getID()               { return ID; }
     public void setID(int ID)        { this.ID = ID; }

@@ -16,12 +16,12 @@ public class Documental extends Contenido {
 
     @Override
     public String reproducir() {
-        return "▶ Reproduciendo documental: " + Titulo;
+        return "Reproduciendo documental: " + Titulo;
     }
 
     @Override
     public String obtenerDetalles() {
-        return "🎥 Documental: " + Titulo
+        return "Documental: " + Titulo
              + "\n   Género    : " + Genero
              + "\n   Calidad   : " + calidad
              + "\n   Tema      : " + tema
