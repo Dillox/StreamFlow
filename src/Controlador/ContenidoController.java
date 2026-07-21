@@ -1,15 +1,20 @@
 package Controlador;
 
 import DAO.ContenidoDAO;
+import DAO.IContenidoDAO;       
 import Modelo.Contenido;
 import java.util.List;
 
 public class ContenidoController {
 
-    private ContenidoDAO contenidoDAO;
+    private final IContenidoDAO contenidoDAO;
 
     public ContenidoController() {
-        contenidoDAO = new ContenidoDAO();
+        this.contenidoDAO = new ContenidoDAO();   
+    }
+
+    public ContenidoController(IContenidoDAO dao) {
+        this.contenidoDAO = dao;
     }
 
     public void agregarContenido(Contenido contenido) {

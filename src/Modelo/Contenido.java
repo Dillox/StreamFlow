@@ -1,7 +1,7 @@
 package Modelo;
 
 public abstract class Contenido {
-    
+
     protected int ID;
     protected String Titulo;
     protected String Genero;
@@ -13,43 +13,28 @@ public abstract class Contenido {
         this.Genero = Genero;
         this.calidad = calidad;
     }
-    
+
+    // Métodos polimórficos obligatorios en cada subclase
     public abstract String reproducir();
     public abstract String obtenerDetalles();
 
-    public int getID() {
-        return ID;
-    }
+    /**
+     * OCP: Cada subclase declara su propio tipo.
+     * Así el DAO nunca necesita usar instanceof.
+     */
+    public abstract String getTipo();
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+    // ── Getters y Setters ──────────────────────────────────────────────────────
 
-    public String getTitulo() {
-        return Titulo;
-    }
+    public int getID()               { return ID; }
+    public void setID(int ID)        { this.ID = ID; }
 
-    public void setTitulo(String Titulo) {
-        this.Titulo = Titulo;
-    }
+    public String getTitulo()        { return Titulo; }
+    public void setTitulo(String t)  { this.Titulo = t; }
 
-    public String getGenero() {
-        return Genero;
-    }
+    public String getGenero()        { return Genero; }
+    public void setGenero(String g)  { this.Genero = g; }
 
-    public void setGenero(String Genero) {
-        this.Genero = Genero;
-    }
-
-    public Calidad getCalidad() {
-        return calidad;
-    }
-
-    public void setCalidad(Calidad calidad) {
-        this.calidad = calidad;
-    }
-    
-    
-    
-    
+    public Calidad getCalidad()      { return calidad; }
+    public void setCalidad(Calidad c){ this.calidad = c; }
 }
