@@ -86,7 +86,7 @@ public class ContenidoDAO implements IContenidoDAO {
             ps.setString(1, contenido.getTitulo());
             ps.setString(2, contenido.getGenero());
             ps.setString(3, calidadABD(contenido.getCalidad()));
-            ps.setString(4, contenido.getTipo());   // ← sin instanceof
+            ps.setString(4, contenido.getTipo());  
             ps.setInt   (5, contenido.getID());
             ps.executeUpdate();
             System.out.println("Contenido actualizado.");
